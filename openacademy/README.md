@@ -1,4 +1,4 @@
-pen Academy module for managing trainings:
+#Academy module for managing trainings:
             - training courses
             - training sessions
             - attendees registration
