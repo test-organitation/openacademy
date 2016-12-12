@@ -8,3 +8,6 @@ class Session(models.Model):
     start_date = fields.Date()
     duration = fields.Float(digits=(6,2), help="Duration in day")
     seats = fields.Integer(string="Number of seats")
+    instructor_id = fields.Many2one('res.parther', string="Intructor")
+    course_id = fields.Many2one('openacademy.course', 
+        ondelete='cascade', string="Course", required=True)
