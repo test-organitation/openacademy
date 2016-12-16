@@ -40,12 +40,12 @@ msgstr "Activo"
 #: model:ir.actions.act_window,name:openacademy.launch_session_wizard
 #: view:openacademy.wizard:openacademy.wizard_form_view
 msgid "Add Attendees"
-msgstr "Agregar asistentes"
+msgstr "Agergar Asistentes"
 
 #. module: openacademy
 #: field:openacademy.wizard,attendee_ids:0
 msgid "Attenddes"
-msgstr "Asistentes"
+msgstr "Attenddes"
 
 #. module: openacademy
 #: field:openacademy.session,attendee_ids:0
@@ -121,13 +121,13 @@ msgstr "Created on"
 #. module: openacademy
 #: view:openacademy.session:openacademy.view_openacad_session_kanban
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_form_view
 #: field:openacademy.course,description:0
 msgid "Description"
-msgstr "Descripción"
+msgstr "Description"
 
 #. module: openacademy
 #: field:openacademy.course,display_name:0
