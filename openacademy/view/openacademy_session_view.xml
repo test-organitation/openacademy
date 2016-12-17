@@ -6,7 +6,7 @@
             <field name="name">session.form</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
-                <form string="Session Form">
+               <form string="Session Form">
                     <header>
                         <button name="button_draft" type="workflow"
                                 string="Reset to draft"
@@ -43,7 +43,7 @@
         </record>
 
         <!-- session tree/list view -->
-        <record model="ir.ui.view" id="session_tree_view">
+        <record model="ir.ui.view" id="openacademy_session_tree_view">
             <field name="name">session.tree</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
@@ -57,7 +57,7 @@
         </record>
 
         <!-- calendar view -->
-        <record model="ir.ui.view" id="session_calendar_view">
+        <record model="ir.ui.view" id="openacademy_session_calendar_view">
             <field name="name">session.calendar</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
@@ -69,7 +69,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="session_gantt_view">
+        <record model="ir.ui.view" id="openacademy_session_gantt_view">
             <field name="name">session.gantt</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
@@ -81,7 +81,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="session_graph_view">
+        <record model="ir.ui.view" id="openacademy_session_graph_view">
             <field name="name">session.graph</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
@@ -92,7 +92,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="view_openacad_session_kanban">
+        <record model="ir.ui.view" id="view_openacademy_session_kanban">
             <field name="name">openacad.session.kanban</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
