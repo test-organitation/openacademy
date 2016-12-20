@@ -25,13 +25,19 @@ for session in sessions:
 
 # Search coruse
 method_name = 'search'
-domain = ['name', '=', 'nombre_curso']
+domain = [('name', '=', 'Curso Odoo 1')]
 course_ids = call('openacademy.course', method_name, domain)
-coruse_id = course_ids[0]
+course_id = course_ids[0]
+print 'course_ids', course_ids
+
+# Create a coruse
+#method_name = 'create'
+#course_id = call('openacademy.course', method_name, {'name': 'Curso Odoo 1'})
 
 # 3.create a new session
 method_name = 'create'
-session_id = call(model, method_name, {
-    'name' : 'My session name',
-    'course_id' : coruse_id
+new_session_id = call(model, method_name, {
+    'name' : 'Session from ws',
+    'course_id' : course_id,
 })
+print "new_session_id", new_session_id
