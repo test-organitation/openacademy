@@ -30,6 +30,8 @@ class Course(models.Model):
 
     @api.one
     def copy(self, default=None):
+        if default is None:
+            default = {}
         copied_count = self.search_count(
             [('name', '=like', _(u"Copy of {}%").format(self.name))])
         if not copied_count:
