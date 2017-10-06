@@ -5,11 +5,12 @@ This module is to create model of Course
 '''
 from openerp import models, fields, api, _
 
+
 class Course(models.Model):
     '''
     This class create model of Course
     '''
-    _name = 'openacademy.course' # model odoo course
+    _name = 'openacademy.course'
 
     name = fields.Char(string='Title', required=True) # Fileds reserved to identified name rec
     description = fields.Text(string='Description')
@@ -17,6 +18,7 @@ class Course(models.Model):
         'res.users', ondelete='set null', string="Responsible", index=True)
     session_ids = fields.One2many(
        'openacademy.session', 'course_id', string="Sessions")
+    test = fields.Char(string='test')
 
     _sql_constraints = [
         ('name_description_check',
