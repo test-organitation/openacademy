@@ -18,8 +18,8 @@ class Course(models.Model):
         'res.users', ondelete='set null', string="Responsible", index=True)
     session_ids = fields.One2many(
        'openacademy.session', 'course_id', string="Sessions")
-    test1 = fields.Char(string='test1')
-    test2 = fields.Char(string='test2')
+    test_modified = fields.Char(string='test_modified')
+    test3 = fields.Char(string='test3')
 
     _sql_constraints = [
         ('name_description_check',
