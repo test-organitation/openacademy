@@ -1,2 +1,2 @@
 # openacademy-project
-Estee proyecto es para subir los módulos de openacademy del curso técnico
+Este proyecto es para subir los módulos de openacademy del curso técnico
