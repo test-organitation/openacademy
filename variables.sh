@@ -1,8 +1,2 @@
-export BASE_IMAGE="vauxoo/odoo-80-image"
-export PSQL_VERSION="9.6"
 export VERSION="8.0"
-export ODOO_REPO="vauxoo/odoo"
-export ODOO_BRANCH="8.0"
 export MAIN_APP="openacademy"
-export TRAVIS_PYTHON_VERSION="2.7"
-export COUNTRY=""
