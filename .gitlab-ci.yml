@@ -1,0 +1,21 @@
+stages:
+  - test
+  - build_test
+
+test:
+  stage: test
+  tags:
+    - odoo
+    - test
+  variables:
+    LINT_CHECK: "0"
+    TESTS: "1"
+  script:
+    - ls
+
+build:
+  stage: build_test
+  tags:
+    - build
+  script:
+    - ls
