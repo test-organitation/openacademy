@@ -1,6 +1,26 @@
+image: vauxoo/odoo-80-image-shippable-auto
 stages:
   - test
-  - build_test
+  - test_build
+
+variables:
+    PSQL_VERSION: "9.6"
+    VERSION: "11.0"
+    ODOO_REPO: "vauxoo/odoo"
+    ODOO_BRANCH: "11.0"
+    INCLUDE: "odoo"
+    INSTALL: "odoo"
+    BASE_IMAGE: "vauxoo/odoo-110-image"
+
+lint:
+  stage: test
+  tags:
+    - lint
+  variables:
+    LINT_CHECK: "1"
+    TESTS: "0"
+  script:
+    - ls
 
 test:
   stage: test
@@ -12,10 +32,18 @@ test:
     TESTS: "1"
   script:
     - ls
+  artifacts:
+    paths:
+      - $CI_COMMIT_REF_SLUG
 
 build:
-  stage: build_test
+  stage: build
   tags:
     - build
+  variables:
+    ORCHEST_REGISTRY: 'http://365ad929.ngrok.io/images/registry'
+    ORCHEST_TOKEN: 'Cl4v3d3M0'
+    CUSTOMER: "odoo"
   script:
-    - ls
+    - pip install deployv
+    - deployvcmd gitlab_tools test_images --push_image
