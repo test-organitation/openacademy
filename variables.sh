@@ -1,2 +1,2 @@
-export VERSION="11.0"
+export VERSION="12.0"
 export MAIN_APP="module1"
